@@ -1,0 +1,108 @@
+libunistring (0.9.3-5.2ubuntu1) vivid; urgency=medium
+
+  * Resynchronise with Debian.  Remaining changes:
+    - Link test-lock with -Wl,--no-as-needed.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 11 Nov 2014 16:28:14 +0000
+
+libunistring (0.9.3-5.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Missing change from last upload, actually run dh-autoreconf to update
+    config.{sub,guess} and {libtool,aclocal}.m4, necessary for some new
+    ports.  Thanks Fernando Seiti Furusato.  (Closes: #755745)
+
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Mon, 04 Aug 2014 19:51:45 +0100
+
+libunistring (0.9.3-5.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Run dh-autoreconf to update config.{sub,guess} and
+    {libtool,aclocal}.m4, necessary for some new ports.  Thanks Fernando
+    Seiti Furusato.  (Closes: #755745)
+  * Add patch float-endian-detection.patch which fixes detection of
+    floating point endianness, gathered from Ubuntu, created by Colin
+    Watson.
+
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Mon, 28 Jul 2014 22:47:32 +0100
+
+libunistring (0.9.3-5ubuntu3) trusty; urgency=medium
+
+  * Fix detection of floating point endianness.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 18 Dec 2013 13:36:34 +0000
+
+libunistring (0.9.3-5ubuntu2) trusty; urgency=low
+
+  * powerpc64le-support.patch: Patch aclocal and configure for ppc64el.
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Sun, 08 Dec 2013 03:44:32 -0700
+
+libunistring (0.9.3-5ubuntu1) saucy; urgency=low
+
+  * Link test-lock with -Wl,--no-as-needed; see
+    https://lists.gnu.org/archive/html/bug-gnulib/2013-10/msg00017.html.
+    Based on a similar change by Matthias Klose in libidn.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 07 Oct 2013 17:56:57 +0100
+
+libunistring (0.9.3-5build1) quantal; urgency=low
+
+  * Rebuild for new armel compiler default of ARMv5t.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 05 Oct 2012 09:41:29 +0100
+
+libunistring (0.9.3-5) unstable; urgency=low
+
+  * Standards-Version 3.9.2 (no changes).
+  * Convert package to multiarch (closes: #646068):
+    - Bumped build-depends versions for cdbs and debhelper.
+    - Extend configure flags to install libraries into 
+      multi-arch library directory.
+    - Adapted debian/libunistring0.install.
+    - Mark libunistring0 as "Multi-Arch: same".
+  * Applied outstanding changes from multiarch patch provided by Steve
+    Langasek on bug #646068:
+    - Removed useless .dirs files.
+    - debian/compat bumped to 8 (compat level 9 not needed as we don't use
+      the "dh" script).
+  * debian/copyright: 
+    - Bumped DEP5 revision in format URL to 202.
+    - Fixed various issues pointed out by lintian.
+  
+ -- Andreas Rottmann <rotty@debian.org>  Wed, 26 Oct 2011 23:23:59 +0200
+
+libunistring (0.9.3-4) unstable; urgency=low
+
+  * Standards-Version 3.9.1:
+    - Don't install libunistring.la (closes: #622432).
+  * Add Vcs-Git and Vcs-Browser fields.
+
+ -- Andreas Rottmann <rotty@debian.org>  Sat, 16 Apr 2011 14:09:54 +0200
+
+libunistring (0.9.3-3) unstable; urgency=low
+
+  * Fix description typo (closes: #596243, thanks to Paul Menzel).
+
+ -- Andreas Rottmann <rotty@debian.org>  Thu, 09 Sep 2010 20:22:45 +0200
+
+libunistring (0.9.3-2) unstable; urgency=low
+
+  * Work around toolchain issue on mipsen by building with -mplt there
+    (closes: #595875, thanks to Julien BLACHE).
+
+ -- Andreas Rottmann <rotty@debian.org>  Wed, 08 Sep 2010 21:45:46 +0200
+
+libunistring (0.9.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * Switched to dpkg-source 3.0 (quilt) format.
+  * Standards-Version 3.8.4 (no changes).
+
+ -- Andreas Rottmann <rotty@debian.org>  Thu, 27 May 2010 19:37:41 +0200
+
+libunistring (0.9.1-1) unstable; urgency=low
+
+  * Initial release (closes: #532125).
+
+ -- Andreas Rottmann <rotty@debian.org>  Sat, 04 Jul 2009 14:31:38 +0200

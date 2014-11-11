@@ -1,0 +1,19 @@
+Description: Link test-lock with -Wl,--no-as-needed
+ See discussion in
+ https://lists.gnu.org/archive/html/bug-gnulib/2013-10/msg00017.html.
+Author: Colin Watson <cjwatson@ubuntu.com>
+Forwarded: no
+Last-Update: 2014-11-11
+
+Index: b/tests/Makefile.gnulib
+===================================================================
+--- a/tests/Makefile.gnulib
++++ b/tests/Makefile.gnulib
+@@ -299,6 +299,7 @@
+ 
+ TESTS += test-lock
+ check_PROGRAMS += test-lock
++test_lock_LDFLAGS = -Wl,--no-as-needed
+ test_lock_LDADD = $(LDADD) @LIBMULTITHREAD@ @YIELD_LIB@
+ EXTRA_DIST += test-lock.c
+ 
